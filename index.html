@@ -2,137 +2,295 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afee Muhammod Wafy | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Afee Muhammod Wafy | Tech Enthusiast & A-Level Student</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav>
-        <div class="container nav-content">
-            <a href="#" class="logo">Wafy<span class="gradient-text">.</span></a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">AFEE<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home" data-nav="home">Home</a></li>
+            <li><a href="#about" data-nav="about">About</a></li>
+            <li><a href="#skills" data-nav="skills">Skills</a></li>
+            <li><a href="#education" data-nav="education">Education</a></li>
+            <li><a href="#certifications" data-nav="certifications">Certifications</a></li>
+            <li><a href="#contact" data-nav="contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <section id="home" class="container">
-        <h1>Hi, I'm <span class="gradient-text">Afee Muhammod Wafy</span></h1>
-        <p>A Level Student | Tech Enthusiast | Lifelong Learner</p>
-        <div><a href="#contact" class="btn">Get In Touch</a></div>
-    </section>
-
-    <section id="about" class="container">
-        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-        <div class="about-box">
-            As an A Level student, I'm becoming more interested in technology and how contemporary systems affect the world. I like learning new concepts, comprehending how things operate, and creating a methodical approach to education. I'm currently laying the groundwork through diligent study, inquisitiveness, and brief, independent investigations. I enjoy interacting with individuals who share knowledge, think critically, and take pleasure in talking about technology.
-        </div>
-    </section>
-
-    <section id="skills" class="container">
-        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
-        <div class="skills-container">
-            <div class="skill-item">
-                <div class="skill-info"><span>Front-End Dev (HTML & CSS)</span><span>85%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+<main class="container">
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero glass-card">
+            <h1>Afee Muhammod Wafy</h1>
+            <div class="typing-wrapper">
+                <span class="typed-text" id="typing-animation"></span>
             </div>
-            <div class="skill-item">
-                <div class="skill-info"><span>Python Programming</span><span>75%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-info"><span>Artificial Intelligence (AI)</span><span>80%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-info"><span>Cybersecurity & Network Security</span><span>75%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-info"><span>MS Excel, Word & PowerPoint</span><span>90%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-info"><span>Canva & Graphic Design</span><span>85%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-info"><span>Cryptocurrency Concepts</span><span>70%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 70%;"></div></div>
-            </div>
+            <p>A-Level Student | Tech Explorer | Lifelong Learner</p>
+            <a href="#contact" class="cta-btn">Let's Connect <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
-    <section id="education" class="container">
-        <h2 class="section-title">Education & <span class="gradient-text">Certs</span></h2>
-        <div class="cards-grid">
-            <div class="card">
-                <i class="fas fa-brain"></i>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="glass-card about-text">
+            <p>As an A Level student, I'm becoming more interested in technology and how contemporary systems affect the world. I like learning new concepts, comprehending how things operate, and creating a methodical approach to education. I'm currently laying the groundwork through diligent study, inquisitiveness, and brief, independent investigations.</p>
+            <br>
+            <p>I enjoy interacting with individuals who share knowledge, think critically, and take pleasure in talking about technology, educational opportunities, or personal development. I'm always willing to have deep discussions, gain new perspectives, and build relationships with professionals, students, and learners from various backgrounds. I'd be happy to connect with you if you enjoy exchanging ideas or learning about tech-related subjects.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section with animated progress bars -->
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <p class="section-sub">Proficiency & hands-on exposure</p>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="skill-name"><span>Network Security</span><span>88%</span></div>
+                <div class="progress-bar-bg"><div class="progress-fill" style="--target:88%"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name"><span>Cybersecurity</span><span>85%</span></div>
+                <div class="progress-bar-bg"><div class="progress-fill" style="--target:85%"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name"><span>Cryptocurrency</span><span>70%</span></div>
+                <div class="progress-bar-bg"><div class="progress-fill" style="--target:70%"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name"><span>MS PowerPoint / Word</span><span>90%</span></div>
+                <div class="progress-bar-bg"><div class="progress-fill" style="--target:90%"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name"><span>Python Programming</span><span>82%</span></div>
+                <div class="progress-bar-bg"><div class="progress-fill" style="--target:82%"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name"><span>Canva / Graphic Design</span><span>88%</span></div>
+                <div class="progress-bar-bg"><div class="progress-fill" style="--target:88%"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name"><span>CSS / Front-End Dev</span><span>80%</span></div>
+                <div class="progress-bar-bg"><div class="progress-fill" style="--target:80%"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name"><span>Microsoft Excel</span><span>86%</span></div>
+                <div class="progress-bar-bg"><div class="progress-fill" style="--target:86%"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name"><span>Artificial Intelligence (AI)</span><span>75%</span></div>
+                <div class="progress-bar-bg"><div class="progress-fill" style="--target:75%"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section (Separate) -->
+    <section id="education">
+        <h2>Education</h2>
+        <p class="section-sub">My academic journey</p>
+        <div class="education-grid">
+            <div class="edu-card glass-card">
+                <i class="fas fa-university"></i>
+                <h3>Higher Secondary Certificate (HSC)</h3>
+                <p class="institution">College · 2024 - Present</p>
+                <p class="edu-description">Currently pursuing A-Levels in Science group with focus on analytical thinking, mathematics, physics, and emerging technologies. Building a strong foundation for future studies in computer science and cybersecurity.</p>
+            </div>
+            <div class="edu-card glass-card">
+                <i class="fas fa-school"></i>
+                <h3>Secondary School Certificate (SSC)</h3>
+                <p class="institution">School · Completed 2024</p>
+                <p class="edu-description">Successfully completed Secondary School Certificate in Science division with excellent academic record. Developed strong foundational knowledge in mathematics, physics, chemistry, and biology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section (Separate) -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <p class="section-sub">Professional credentials & verified achievements</p>
+        <div class="certs-grid">
+            <div class="cert-card">
+                <i class="fab fa-futurelearn"></i>
                 <h3>Digital Skills: AI</h3>
                 <p>FutureLearn</p>
-                <a href="https://www.futurelearn.com/certificates/e6npdxg" target="_blank">Verify <i class="fas fa-external-link-alt"></i></a>
+                <a class="verify-link" href="https://www.futurelearn.com/certificates/e6npdxg" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
             </div>
-            <div class="card">
+            <div class="cert-card">
                 <i class="fas fa-shield-alt"></i>
                 <h3>Intro to Cyber Security</h3>
                 <p>FutureLearn</p>
-                <a href="https://www.futurelearn.com/certificates/h6davat" target="_blank">Verify <i class="fas fa-external-link-alt"></i></a>
+                <a class="verify-link" href="https://www.futurelearn.com/certificates/h6davat" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
             </div>
-            <div class="card">
+            <div class="cert-card">
                 <i class="fab fa-python"></i>
                 <h3>Basics of Python</h3>
                 <p>UniAthena</p>
-                <a href="https://uniathena.com/verify/certificate?certID=8781-9786-7632" target="_blank">Verify <i class="fas fa-external-link-alt"></i></a>
+                <a class="verify-link" href="https://uniathena.com/verify/certificate?certID=8781-9786-7632" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
             </div>
-            <div class="card">
-                <i class="fas fa-palette"></i>
+            <div class="cert-card">
+                <i class="fab fa-canva"></i>
                 <h3>Canva For Beginners</h3>
                 <p>Simplilearn</p>
-                <a href="https://simpli-web.app.link/e/DXiqi2ANM1b" target="_blank">Verify <i class="fas fa-external-link-alt"></i></a>
+                <a class="verify-link" href="https://simpli-web.app.link/e/DXiqi2ANM1b" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
             </div>
-            <div class="card">
-                <i class="fas fa-file-excel"></i>
+            <div class="cert-card">
+                <i class="fas fa-chart-line"></i>
                 <h3>Excel: Zero to Hero</h3>
                 <p>Udemy</p>
-                <a href="https://udemy.com/certificate/UC-04491d93-4e56-413d-9c41-da1642c5844d/" target="_blank">Verify <i class="fas fa-external-link-alt"></i></a>
+                <a class="verify-link" href="https://udemy.com/certificate/UC-04491d93-4e56-413d-9c41-da1642c5844d/" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
             </div>
-            <div class="card">
+            <div class="cert-card">
                 <i class="fab fa-html5"></i>
-                <h3>Intro to HTML</h3>
+                <h3>Introduction to HTML</h3>
                 <p>Simplilearn</p>
-                <a href="https://simpli-web.app.link/e/isp9CvQ6G1b" target="_blank">Verify <i class="fas fa-external-link-alt"></i></a>
+                <a class="verify-link" href="https://simpli-web.app.link/e/isp9CvQ6G1b" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="container">
-        <h2 class="section-title">Work With <span class="gradient-text">Me</span></h2>
-        <div class="contact-list">
-            <a href="https://linkedin.com/in/afemuhammodwafy1" target="_blank" class="contact-btn">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="mailto:afeemuhammodwafy@yahoo.com" class="contact-btn">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="https://Facebook.com/afeemuhammadwafi3" target="_blank" class="contact-btn">
-                <i class="fab fa-facebook-f"></i> Facebook
-            </a>
-            <a href="https://wa.me/8801644568471" target="_blank" class="contact-btn">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Connect With Me</h2>
+        <p class="section-sub">Let's exchange ideas — reach out via any platform</p>
+        <div class="contact-buttons">
+            <a href="https://linkedin.com/in/afeemuhammodwafy1" target="_blank" class="contact-btn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="mailto:afeemuhammodwafy@yahoo.com" class="contact-btn"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://wa.me/8801644568471" target="_blank" class="contact-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://facebook.com/afeemuhammadwafi3" target="_blank" class="contact-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://instagram.com/afeemuhammadwafi" target="_blank" class="contact-btn"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://x.com/muhammadwafi27" target="_blank" class="contact-btn"><i class="fab fa-twitter"></i> Twitter</a>
         </div>
     </section>
+</main>
 
-    <footer>
-        <p>Copyright @Wafy_ <br> 2026 Portfolio</p>
-    </footer>
+<footer>
+    <p>© 2026 Wafy — Created to test my skills</p>
+</footer>
 
+<script>
+    // ========== TYPING ANIMATION ==========
+    const roles = ["A-Level Student", "Cybersecurity Enthusiast", "Front-End Developer", "AI & Tech Explorer"];
+    let roleIndex = 0, charIndex = 0, isDeleting = false;
+    const typedSpan = document.getElementById("typing-animation");
+    
+    function typeEffect() {
+        if (!typedSpan) return;
+        const currentRole = roles[roleIndex];
+        if (isDeleting) {
+            typedSpan.innerText = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(typeEffect, 300);
+                return;
+            }
+            setTimeout(typeEffect, 60);
+        } else {
+            typedSpan.innerText = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === currentRole.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, 1800);
+                return;
+            }
+            setTimeout(typeEffect, 100);
+        }
+    }
+    typeEffect();
+
+    // ========== PROGRESS BARS ANIMATION ==========
+    document.querySelectorAll('.progress-fill').forEach(bar => {
+        const targetWidth = bar.style.getPropertyValue('--target').trim();
+        if(targetWidth) {
+            bar.style.width = targetWidth;
+        }
+    });
+
+    // ========== SMOOTH SCROLLING FOR NAVIGATION ==========
+    const allNavLinks = document.querySelectorAll('.nav-links a');
+    const ctaButton = document.querySelector('.cta-btn');
+    
+    function smoothScrollToSection(targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            allNavLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href === `#${targetId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    }
+    
+    allNavLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const targetId = href.substring(1);
+                smoothScrollToSection(targetId);
+            }
+        });
+    });
+    
+    if (ctaButton) {
+        ctaButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const targetId = href.substring(1);
+                smoothScrollToSection(targetId);
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', () => {
+        let scrollPos = window.scrollY + 120;
+        const sections = document.querySelectorAll('section');
+        let activeId = '';
+        sections.forEach(section => {
+            const offsetTop = section.offsetTop;
+            const offsetHeight = section.offsetHeight;
+            if(scrollPos >= offsetTop && scrollPos < offsetTop + offsetHeight) {
+                activeId = section.getAttribute('id');
+            }
+        });
+        if(activeId) {
+            allNavLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${activeId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        if (!anchor.hasAttribute('data-smooth-bound')) {
+            anchor.setAttribute('data-smooth-bound', 'true');
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === "#" || href === "") return;
+                const targetId = href.substring(1);
+                const targetElem = document.getElementById(targetId);
+                if (targetElem) {
+                    e.preventDefault();
+                    targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
