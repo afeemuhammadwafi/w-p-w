@@ -195,6 +195,9 @@ nav {
 
 .card:hover { transform: translateY(-10px); border-color: var(--accent-primary); }
 .card i { font-size: 2rem; color: var(--accent-primary); margin-bottom: 15px; }
+.card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+.card p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; }
+.card a { color: var(--accent-secondary); text-decoration: none; font-weight: 600; font-size: 0.8rem; }
 
 /* === Contact & Footer === */
 .contact-list {
@@ -218,6 +221,7 @@ nav {
 }
 
 .contact-btn:hover { background: rgba(0, 242, 254, 0.15); transform: scale(1.05); }
+.contact-btn i { color: var(--accent-primary); font-size: 1.2rem; }
 
 footer {
     text-align: center;
