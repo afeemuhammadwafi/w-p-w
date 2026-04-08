@@ -15,12 +15,13 @@
     <div class="nav-container">
         <div class="logo">AFEE<span>.</span></div>
         <ul class="nav-links">
-            <li><a href="#home" data-nav="home">Home</a></li>
-            <li><a href="#about" data-nav="about">About</a></li>
-            <li><a href="#skills" data-nav="skills">Skills</a></li>
-            <li><a href="#education" data-nav="education">Education</a></li>
-            <li><a href="#certifications" data-nav="certifications">Certifications</a></li>
-            <li><a href="#contact" data-nav="contact">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -48,7 +49,7 @@
         </div>
     </section>
 
-    <!-- Skills Section with animated progress bars -->
+    <!-- Skills Section -->
     <section id="skills">
         <h2>Technical Skills</h2>
         <p class="section-sub">Proficiency & hands-on exposure</p>
@@ -92,7 +93,29 @@
         </div>
     </section>
 
-    <!-- Education Section (Separate) -->
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <p class="section-sub">Featured work & personal projects</p>
+        <div class="projects-grid">
+            <div class="project-card glass-card">
+                <div class="project-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>WafyPass | Smart Password Generator</h3>
+                <p class="project-description">
+                    A high-performance, minimalist web application designed to simplify digital security. 
+                    It generates cryptographically strong passwords tailored to specific user requirements, 
+                    blending advanced functionality with a modern aesthetic.
+                </p>
+                <a href="https://afeemuhammadwafi.github.io/wpg/" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i> View Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
     <section id="education">
         <h2>Education</h2>
         <p class="section-sub">My academic journey</p>
@@ -101,18 +124,18 @@
                 <i class="fas fa-university"></i>
                 <h3>Higher Secondary Certificate (HSC)</h3>
                 <p class="institution">College · 2024 - Present</p>
-                <p class="edu-description">Currently pursuing A-Levels in Science group with focus on analytical thinking, mathematics, physics, and emerging technologies. Building a strong foundation for future studies in computer science and cybersecurity.</p>
+                <p class="edu-description">Currently pursuing A-Levels in Science group with focus on analytical thinking, mathematics, physics, and emerging technologies.</p>
             </div>
             <div class="edu-card glass-card">
                 <i class="fas fa-school"></i>
                 <h3>Secondary School Certificate (SSC)</h3>
                 <p class="institution">School · Completed 2024</p>
-                <p class="edu-description">Successfully completed Secondary School Certificate in Science division with excellent academic record. Developed strong foundational knowledge in mathematics, physics, chemistry, and biology.</p>
+                <p class="edu-description">Successfully completed Secondary School Certificate in Science division with excellent academic record.</p>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section (Separate) -->
+    <!-- Certifications Section -->
     <section id="certifications">
         <h2>Certifications</h2>
         <p class="section-sub">Professional credentials & verified achievements</p>
@@ -176,7 +199,7 @@
 </footer>
 
 <script>
-    // ========== TYPING ANIMATION ==========
+    // Typing Animation
     const roles = ["A-Level Student", "Cybersecurity Enthusiast", "Front-End Developer", "AI & Tech Explorer"];
     let roleIndex = 0, charIndex = 0, isDeleting = false;
     const typedSpan = document.getElementById("typing-animation");
@@ -207,7 +230,7 @@
     }
     typeEffect();
 
-    // ========== PROGRESS BARS ANIMATION ==========
+    // Progress Bars
     document.querySelectorAll('.progress-fill').forEach(bar => {
         const targetWidth = bar.style.getPropertyValue('--target').trim();
         if(targetWidth) {
@@ -215,81 +238,36 @@
         }
     });
 
-    // ========== SMOOTH SCROLLING FOR NAVIGATION ==========
-    const allNavLinks = document.querySelectorAll('.nav-links a');
-    const ctaButton = document.querySelector('.cta-btn');
-    
-    function smoothScrollToSection(targetId) {
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            allNavLinks.forEach(link => {
-                link.classList.remove('active');
-                const href = link.getAttribute('href');
-                if (href === `#${targetId}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
-    }
-    
-    allNavLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+    // Smooth Scroll
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const href = this.getAttribute('href');
-            if (href && href.startsWith('#')) {
-                const targetId = href.substring(1);
-                smoothScrollToSection(targetId);
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
             }
         });
     });
-    
-    if (ctaButton) {
-        ctaButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            const href = this.getAttribute('href');
-            if (href && href.startsWith('#')) {
-                const targetId = href.substring(1);
-                smoothScrollToSection(targetId);
-            }
-        });
-    }
-    
+
+    // Active link on scroll
     window.addEventListener('scroll', () => {
         let scrollPos = window.scrollY + 120;
-        const sections = document.querySelectorAll('section');
-        let activeId = '';
-        sections.forEach(section => {
+        document.querySelectorAll('section').forEach(section => {
             const offsetTop = section.offsetTop;
             const offsetHeight = section.offsetHeight;
             if(scrollPos >= offsetTop && scrollPos < offsetTop + offsetHeight) {
-                activeId = section.getAttribute('id');
+                const activeId = section.getAttribute('id');
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.classList.remove('active');
+                    if(link.getAttribute('href') === `#${activeId}`) {
+                        link.classList.add('active');
+                    }
+                });
             }
         });
-        if(activeId) {
-            allNavLinks.forEach(link => {
-                link.classList.remove('active');
-                if(link.getAttribute('href') === `#${activeId}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
-    });
-    
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        if (!anchor.hasAttribute('data-smooth-bound')) {
-            anchor.setAttribute('data-smooth-bound', 'true');
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href === "#" || href === "") return;
-                const targetId = href.substring(1);
-                const targetElem = document.getElementById(targetId);
-                if (targetElem) {
-                    e.preventDefault();
-                    targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        }
     });
 </script>
 </body>

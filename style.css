@@ -208,7 +208,7 @@ h2:after {
     color: #bdd4ff;
 }
 
-/* ========== SKILLS 2-COLUMN GRID + PROGRESS BARS ========== */
+/* ========== SKILLS SECTION ========== */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -248,6 +248,71 @@ h2:after {
 @keyframes fillProgress {
     from { width: 0%; }
     to { width: var(--target); }
+}
+
+/* ========== PROJECTS SECTION ========== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background: rgba(12, 22, 40, 0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 1px solid rgba(0, 255, 255, 0.25);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.project-card:hover {
+    border-color: cyan;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.1);
+}
+
+.project-icon i {
+    font-size: 4rem;
+    color: #0ff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px cyan;
+}
+
+.project-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff, #0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.project-description {
+    color: #c5d5ff;
+    line-height: 1.6;
+    margin: 1rem 0 1.5rem 0;
+    text-align: justify;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #0ff, #0066ff);
+    color: #03050b;
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.project-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
 }
 
 /* ========== EDUCATION SECTION ========== */
@@ -364,7 +429,7 @@ h2:after {
     color: white;
 }
 
-/* ========== CONTACT BUTTONS ========== */
+/* ========== CONTACT SECTION ========== */
 .contact-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -440,8 +505,8 @@ footer {
     .education-grid {
         grid-template-columns: 1fr;
     }
-    .edu-card h3 {
-        font-size: 1.2rem;
+    .project-card h3 {
+        font-size: 1.3rem;
     }
 }
 
@@ -455,7 +520,8 @@ footer {
     .hero h1 {
         font-size: 1.6rem;
     }
-    .edu-card {
-        padding: 1.5rem;
+    .project-link {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
